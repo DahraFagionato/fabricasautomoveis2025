@@ -2,8 +2,8 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 const read = async (req, res) => {
-    const vendas = await prisma.venda.findMany();
-    res.json(vendas);
+    const concessionarias = await prisma.concessionaria.findMany();
+    res.json(concessionarias);
 };
 
 module.exports = {
